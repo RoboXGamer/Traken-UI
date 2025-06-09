@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "@traken-ui/react/dist/traken-theme.css";
+@import "@traken-ui/react/dist/esm/index.css";
+
+:root {
+  --sl-sidebar-width: 15rem;
+}

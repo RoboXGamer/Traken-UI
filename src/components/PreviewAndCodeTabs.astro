@@ -1,0 +1,36 @@
+---
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+import { Code } from "@astrojs/starlight/components";
+
+interface Props {
+  codeString: string;
+  lang?: string;
+  gap?: "gap-8" | "gap-4" | "gap-2";
+}
+
+const { codeString, lang = "tsx", gap = "gap-8" } = Astro.props as Props;
+---
+
+<Tabs>
+  <TabItem label="Preview">
+    <div class="flex justify-center items-center gap-4 p-8 terminal-bg">
+      <div class="flex place-items-center content" class:list={[gap]}>
+        <slot />
+      </div>
+    </div>
+  </TabItem>
+  <TabItem label="Code">
+  <Code code={codeString} lang={lang} />
+</TabItem>
+</Tabs>
+
+
+
+<style is:global>
+  .terminal-bg {
+    background: linear-gradient(90deg, #040f12, #02060a);
+  }
+  .content *{
+    margin: 0;
+  }
+</style>

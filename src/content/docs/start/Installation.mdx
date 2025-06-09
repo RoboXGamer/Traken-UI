@@ -1,0 +1,67 @@
+---
+title: Installation
+description: Install Traken UI in your project.
+sidebar:
+  order: 2
+---
+
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+import { Code } from "@astrojs/starlight/components";
+
+Welcome to the Traken UI docs!
+
+## Requirements
+
+- React 18 or later
+- Tailwind CSS 4.1 or later
+- Modern JavaScript environment (supports ES6)
+
+## Quick Installation
+
+The fastest way to add Traken UI to your project:
+
+<Tabs>
+  <TabItem label="pnpm">
+    <Code code={`pnpm add @traken-ui/react`} lang="bash" />
+  </TabItem>
+  <TabItem label="npm">
+    <Code code={`npm install @traken-ui/react`} lang="bash" />
+  </TabItem>
+  <TabItem label="bun">
+    <Code code={`bun add @traken-ui/react`} lang="bash" />
+  </TabItem>
+</Tabs>
+
+## Setup
+
+Import the CSS in your main application file:
+
+<Code
+  code={`@import "@traken-ui/react/dist/traken-theme.css";
+@import "@traken-ui/react/dist/esm/index.css";
+@import "tailwindcss";`}
+  lang="css"
+  title="global.css"
+/>
+
+Use the components:
+
+```jsx
+import { Button } from "@traken-ui/react";
+
+export default function App() {
+  return (
+    <div>
+      <Button
+        color="primary"
+        size="md"
+        rounded="sm"
+        variant="solid"
+        className="cursor-pointer"
+      >
+        click me
+      </Button>
+    </div>
+  );
+}
+```

@@ -1,0 +1,60 @@
+---
+title: Button
+description: A component for creating collapsible content.
+---
+
+import PreviewAndCodeTabs from "../../../components/PreviewAndCodeTabs.astro";
+
+{/* Components imported */}
+import { ButtonVariants, ButtonColorVariants, ButtonRoundedVariants } from "../components";
+import ButtonVariantsCode from "../components/files/ButtonVariants?raw";
+import ButtonColorVariantsCode from "../components/files/ButtonColorVariants?raw";
+import ButtonRoundedVariantsCode from "../components/files/ButtonRoundedVariants?raw";
+
+{/* Main Content */}
+
+A versatile, customizable element for user actions, supporting themes, sizes, variants, ripple effects, and styling options.
+
+<br />
+<hr />
+<br />
+
+#### Variants
+
+<PreviewAndCodeTabs codeString={ButtonVariantsCode}>
+  <ButtonVariants />
+</PreviewAndCodeTabs>
+
+#### Colors
+
+<PreviewAndCodeTabs codeString={ButtonColorVariantsCode} gap="gap-2">
+  <ButtonColorVariants />
+</PreviewAndCodeTabs>
+
+#### Radius
+
+<PreviewAndCodeTabs codeString={ButtonRoundedVariantsCode} gap="gap-2">
+  <ButtonRoundedVariants />
+</PreviewAndCodeTabs>
+
+#### Features
+
+- Customizable sizes, colors, and variants
+- Supports ripple effect on click
+- Easy integration with events such as onMouseDown
+- Fully customizable styling and class names
+- Supports accessibility attributes
+
+#### Props
+
+| Prop          | Type                                                                       | Default | Description                                           |
+| :------------ | :------------------------------------------------------------------------- | :------ | :---------------------------------------------------- |
+| `children`    | `React.ReactNode`                                                          | —       | Content of the button, typically text or an icon.     |
+| `className`   | `string`                                                                   | —       | Custom class name for additional styling.             |
+| `ripple`      | `boolean`                                                                  | `true`  | Enables the ripple effect when the button is clicked. |
+| `color`       | `"base" \| "primary" \| "secondary" \| "success" \| "warning" \| "danger"` | —       | Color theme of the button.                            |
+| `size`        | `"sm" \| "md" \| "lg" \| "xl"`                                             | —       | Size of the button.                                   |
+| `rounded`     | `"sm" \| "md" \| "lg" \| "xl" \| "full"`                                   | —       | Border radius of the button.                          |
+| `variant`     | `"solid" \| "outline" \| "ghost" \| "flat"`                                | —       | Style variant of the button.                          |
+| `onMouseDown` | `MouseEventHandler<HTMLButtonElement>`                                     | —       | Callback function to handle mouse down events.        |
+| `...props`    | `ButtonHTMLAttributesWithoutColor`                                         | —       |                                                       |
