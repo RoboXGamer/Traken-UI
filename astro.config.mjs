@@ -4,11 +4,14 @@ import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
   integrations: [
     starlight({
       components: {
@@ -36,4 +39,6 @@ export default defineConfig({
     }),
     react(),
   ],
+
+  adapter: netlify(),
 });
