@@ -1,6 +1,10 @@
-@import "tailwindcss";
-@import "@traken-ui/react/dist/traken-theme.css";
-@import "@traken-ui/react/dist/esm/index.css";
+@layer base, trakenTheme, trakenMain, starlight, theme, components, utilities;
+
+@import "@traken-ui/react/dist/traken-theme.css" layer(trakenTheme);
+@import "@traken-ui/react/dist/esm/index.css" layer(trakenMain);
+@import "@astrojs/starlight-tailwind";
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
 
 :root {
   --sl-sidebar-width: 15rem;
